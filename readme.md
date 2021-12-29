@@ -1,10 +1,10 @@
 # Script Correção XML NFS-E
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/nordiws/script-correcao-xml-nfse?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/nordiws/script-correcao-xml-nfse?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/nordiws/script-correcao-xml-nfse?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/nordiws/script-correcao-xml-nfse?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/nordiws/script-correcao-xml-nfse?style=for-the-badge)
 
 > O script foi criado para efetuar a correção de arredondamento do ISS, ISS retido e valor liquido nos XMLs enviados a ser convertidos em NFS-E para auxiliar no meu trabalho na Services 4 IT
 
@@ -21,12 +21,15 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 Para instalar o <script-correcao-xml-nfse>, siga estas etapas:
 
-```
 Clonar o repositório com os comandos:
-Para SSH:
-git clone git@github.com:nordiws/script-correcao-xml-nfse.git
 
-Para HTTP
+Link SSH:
+```
+git clone git@github.com:nordiws/script-correcao-xml-nfse.git
+```
+
+Link HTTP
+```
 git clone https://github.com/nordiws/script-correcao-xml-nfse.git
 ```
 
