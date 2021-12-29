@@ -13,8 +13,8 @@
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 <!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 * Instalar o runtime do python no link: https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe
-* Selecionar a opção “AddPython 3.10 to PATH”
- <img src="python_inst.jpg" alt="Configuração do instalador">
+* Selecionar a opção “Add Python 3.10 to PATH”
+ <img src="python-inst.jpg" alt="Configuração do instalador">
 
 
 ## 🚀 Instalando <script-correcao-xml-nfse>
@@ -42,8 +42,6 @@ Copiar os XMLs das notas a ser corrigidas na pasta ./erradas
 Rodar o arquivo app.py
 Copiar os XMLs das notas corrigidas da pasta ./corrigidas
 ```
-
-
 
 ### Ajustes e melhorias
 
