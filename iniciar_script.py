@@ -26,18 +26,18 @@ def fixXML(xmlFile):
 
                         if value.tag == "vlServicos":
                             serviceValue = float(value.text)
-                            roundedISS = str(round(serviceValue * iss, 4))
+                            roundedISS = str(round(serviceValue * iss, 2))
 
                             if len(roundedISS) == 3:
-                                roundedISS += "000"
-                            elif len(roundedISS) == 4 or len(roundedISS) == 5:
                                 roundedISS += "00"
+                            elif len(roundedISS) == 4 or len(roundedISS) == 5:
+                                roundedISS += "0"
 
                         if value.tag == "issRet":
                             if value.text == "1":
                                 issRet = True
                                 vlISSRet = round(
-                                    float(roundedISS) + round(float(roundedISS) * iss, 4), 4)
+                                    float(roundedISS) + round(float(roundedISS) * iss, 2), 2)
 
                         if value.tag == "vlISS":
                             value.text = value.text.replace(
@@ -50,7 +50,7 @@ def fixXML(xmlFile):
                         if value.tag == "vliquiNFSe":
                             if issRet:
                                 value.text = value.text.replace(
-                                    value.text, str(round(serviceValue - vlISSRet, 4)))
+                                    value.text, str(round(serviceValue - vlISSRet, 2)))
                             else:
                                 value.text = str(serviceValue)
 
