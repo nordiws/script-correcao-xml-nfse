@@ -50,7 +50,7 @@ def fixXML(xmlFile):
                         if value.tag == "vliquiNFSe":
                             if issRet:
                                 value.text = value.text.replace(
-                                    value.text, str(round(serviceValue - roundedISS, 2)))
+                                    value.text, str(round(serviceValue - float(roundedISS), 2)))
                             else:
                                 value.text = str(serviceValue)
 
