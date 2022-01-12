@@ -3,7 +3,8 @@ import logging
 from os import walk
 
 logger = logging.getLogger()
-logger.propogate = True
+logger.propagate = True
+counter = 0
 
 
 def fixXML(xmlFile):
@@ -22,7 +23,6 @@ def fixXML(xmlFile):
                     for value in itens:
                         if value.tag == "alISS":
                             iss = round(float(value.text) / 100, 2)
-                            logger.error(str(iss))
 
                         if value.tag == "vlServicos":
                             serviceValue = float(value.text)
@@ -58,6 +58,10 @@ def fixXML(xmlFile):
 
             with open("./corrigidas/" + output_file, 'w') as f:
                 tree.write(f, encoding='unicode')
+            global counter
+            counter += 1
+            logger.error(
+                "{}. Arquivo {} corrigido com sucesso.".format(counter, output_file))
 
 
 files = []
@@ -69,3 +73,5 @@ for (dirpath, dirnames, filenames) in walk(path):
 
 for rps in files:
     fixXML(rps)
+
+wait = input("\nDigite 'Enter' para finalizar o script.")
