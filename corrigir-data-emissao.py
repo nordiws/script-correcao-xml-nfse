@@ -17,12 +17,13 @@ def fixXML(xmlFile):
         root = tree.getroot()
 
         for child in root:
-            if child.tag == "dtEmis":
-                dtnow = datetime.now()
-                day_string = dtnow.strftime("%Y-%m-%d")
-                hour_string = dtnow.strftime("%H:%M:%S")
-                child.text = day_string + "T" + hour_string
-                time.sleep(1)
+            for value in child:
+                if value.tag == "dtEmis":
+                    dtnow = datetime.now()
+                    day_string = dtnow.strftime("%Y-%m-%d")
+                    hour_string = dtnow.strftime("%H:%M:%S")
+                    value.text = day_string + "T" + hour_string
+                    time.sleep(1)
 
             output_file = xmlFile.replace(".xml", "") + "_CORRIGIDA.xml"
 
