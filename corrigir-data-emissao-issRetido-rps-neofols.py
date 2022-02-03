@@ -6,6 +6,7 @@ logger = logging.getLogger()
 logger.propagate = True
 counter = 0
 serviceValue = ""
+issValue = ""
 
 
 def fixXML(xmlFile):
@@ -17,9 +18,6 @@ def fixXML(xmlFile):
 
         for rps in root:  # root = <NeoGrid>
             for child in rps:
-                if(child.tag == "dtEmis"):
-                    child.text = "2022-01-30T00:00:00"
-
                 if (child.tag == "servico"):
                     for value in child:
                         if (value.tag == "vlServicos"):
@@ -33,11 +31,15 @@ def fixXML(xmlFile):
                         if(value.tag == "issRet"):
                             value.text = "2"
 
+                        if(value.tag == "vlISS"):
+                            global issValue
+                            issValue = value.text
+
                         if(value.tag == "vlISSRet"):
                             value.text = "0.000"
 
                         if(value.tag == "baseCalculo"):
-                            value.text = serviceValue
+                            value.text = float(serviceValue) + float(issValue)
 
                         if(value.tag == "vliquiNFSe"):
                             value.text = serviceValue
